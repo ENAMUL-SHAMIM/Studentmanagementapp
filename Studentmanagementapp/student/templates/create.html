@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Student Information</title>
+</head>
+<body>
+<h1>Add New Record</h1>
+
+<form method="post" action="/create">
+{% csrf_token %}
+
+    <div>
+
+        <label>Student reg. Number</label>
+
+        {{form.reg_number}}
+
+    </div>
+
+     <div>
+
+        <label>Student name</label>
+
+        {{form.name}}
+
+    </div>
+
+    <div>
+
+        <label>Student email</label>
+
+        {{form.email}}
+
+    </div>
+
+    <div>
+
+        <label>Student Age</label>
+
+        {{form.age}}
+
+    </div>
+
+    <br>
+
+    <div>
+
+        <button type="submit">Submit</button>
+
+    </div>
+
+</form>
+</body>
+</html>

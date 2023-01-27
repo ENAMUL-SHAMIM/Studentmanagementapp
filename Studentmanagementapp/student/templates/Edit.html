@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Update</title>
+</head>
+<body>
+<form method="post" action="/Update">
+{% csrf_token %}
+
+    <div>
+
+        <label>Student Reg. Number</label>
+
+        <input type="text", name="Reg_Number", value="{{Student.Reg_Number}}">
+
+    </div>
+
+     <div>
+
+        <label>Student Name</label>
+
+        <input type="text", name="Name", value="{{Student.Name}}">
+
+    </div>
+
+    <div>
+
+        <label>Student Email</label>
+
+        <input type="email", name="Email", value="{{Student.Email}}">
+
+    </div>
+
+    <div>
+
+        <label>Student Age</label>
+
+        <input type="Number", name="Age", value="{{Student.Age}}">
+
+    </div>
+
+</body>
+</html>

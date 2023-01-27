@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Student Information</title>
+</head>
+<body>
+
+<a href="/Create">
+    <button>Add new student</button>
+
+</a>
+<br>
+
+<table>
+    <thead>
+    <tr>
+        <th style="border: 2px solid green">Student Reg_Number</th>
+        <th style="border: 2px solid green">Student Name</th>
+        <th style="border: 2px solid green">Student Email</th>
+        <th style="border: 2px solid green">Student Age</th>
+        <th style="border: 2px solid green">Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {%for Student in students%}
+
+    <tr>
+        <td style="border: 2px solid green">{{Student.Reg_Number}}</td>
+        <td style="border: 2px solid green">{{Student.Name}}</td>
+        <td style="border: 2px solid green">{{Student.Email}}</td>
+        <td style="border: 2px solid green">{{Student.Age}}</td>
+        <td style="border: 2px solid green">
+            <a href="/edit/{{Student.id}}">Edit</a>
+            <a href="/Delete/{{Student.id}}">Delete</a>
+        </td>
+    </trh
+
+
+    {%endfor%}
+
+    </tbody>
+
+
+</table>
+</body>
+</html>
